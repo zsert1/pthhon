@@ -108,9 +108,9 @@
     - 엔터 이후 줄 바뀜 기호 입력되므로 rstrip() 메서드 함께 사용되어야 한다.  
 
 ### 표준 출력 방법
-    - 기본 출력은 print() 이용하고 ,로 구분
-    - end 속성으로 빈 문자열 입력하면 줄 바꿈 안됨
-    - 문자열 앞에 접두사 'f'를 붙이면 +쓸 필요없다.
+  - 기본 출력은 print() 이용하고 ,로 구분
+  - end 속성으로 빈 문자열 입력하면 줄 바꿈 안됨
+  - 문자열 앞에 접두사 'f'를 붙이면 +쓸 필요없다.
 
 ### 조건문 
  - `if 조건문:  `  
@@ -134,5 +134,32 @@
           continue  
           result +=i  
   - break는 반복문을 즉시 탈출 
-   
- 
+
+  ### 함수
+   - 정의하기 => def 함수명(): 
+     - `def 함수명(매개변수):  
+            실행할 소스코드  
+            return`  
+   - 함수의 바깥에 선언된 변수를 **global** 키워드를 이용하여 변수를 사용할 수 있다.
+   - 함수는 여러개의 반환 값을 가질 수 있다
+   - 람다 표현식 => 특정한 기능을 수행하는 함수를 한 줄에 작성할 수 있다.
+      - 단순히 한 번만 사용할때 사용
+      - 예시) (lambda a,b:a+b(3,7))
+
+  ### 내장함수
+  - 순열: 서로 다른 n 개에서 서로 다른 r 개를 선택하여 나열(순서를 고려한다)
+    - from itertools import permutations 사용
+    - `data = ['a','b','c']`  
+      `result =list(permutations(data,3))`
+  - 조합: 서로 다른 n 개에서 서로 다른 r 개를 선택하여 나열(순서를 고려안한다)
+    - from itertools import combinations 사용
+    - `data = ['a','b','c']`  
+      `result =list(combinations(data,2))`
+  - count(): 내부의 원소가 몇 번 등장했는지
+    -  from collections import Counter
+  - 최대 공약수: gcd()
+  - 최소 공배수 구하는 함수
+     - `def lcm(a,b):  
+     return a*b//math.gcd(a,b)`
+       
+            
